@@ -18,8 +18,7 @@ export default function VisitorCounter() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <h1 className="text-2xl font-bold">Contador de Visitas</h1>
+    <div className="text-gray-300">
       <p className="text-lg mt-2">Número de visitas: {count}</p>
     </div>
   );

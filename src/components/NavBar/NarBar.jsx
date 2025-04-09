@@ -1,6 +1,7 @@
 import Button  from "../Button";
 import { Menu } from "iconoir-react";
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const NavBarLink = ({className, children}) => (
@@ -36,8 +37,12 @@ const NavBar = () => {
                 <NavBarLink className="lg:mb-0 px-3">Accesorios</NavBarLink>
                 <NavBarLink className="lg:mb-0 px-3">Ayuda</NavBarLink>
 
-                <Button className="lg:mt-0 lg:mr-4 text-white">Iniciar Sesion</Button>
-                <Button className="lg:mt-0 lg:mr-4 text-white">Registrarse</Button>
+                <Link to="/login">
+                    <Button className="lg:mt-0 lg:mr-4 text-white">Iniciar Sesion</Button>
+                </Link>
+                <Link to="/register">
+                    <Button className="lg:mt-0 lg:mr-4 text-white">Registrarse</Button>
+                </Link>
             </div>
             <Menu className="lg:hidden text-white z-50" onClick={showMenu}/>
         </nav>

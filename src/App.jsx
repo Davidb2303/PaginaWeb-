@@ -5,7 +5,8 @@ import Footer from "./components/Footer/Footer";
 import Mision from "./components/Mision/Mision";
 import Vision from "./components/Vision/Vision";
 import Home from "./components/Home/Home";
-import Count from "./components/Contador/Count";
+import Login from "./components/login/Login";
+import Register from "./components/Register/Register";
 
 const App = () => {
   return (
@@ -18,9 +19,10 @@ const App = () => {
             <Route path="/home" element={<Home />} />
             <Route path="/mision" element={<Mision />} />
             <Route path="/vision" element={<Vision />} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/register" element={<register/>} />
           </Routes>
         </div>
-        <Count/>
 
         <Footer /> 
       </Router>
