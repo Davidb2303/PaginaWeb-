@@ -1,7 +1,7 @@
 import Button from "../Button";
 import { Link } from "react-router-dom";
 import React, {useState} from "react";
-import { registerUser } from "../";
+import { registerUser } from "../../api/auth";
 
 
 const Register = () => {

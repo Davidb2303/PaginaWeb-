@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import Button  from "../Button";
 import { Link } from "react-router-dom";
-import { loginUser } from "../api/auth";
+import { loginUser } from "../../api/auth";
 
 
 const Login = () => {
