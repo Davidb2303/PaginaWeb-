@@ -41,6 +41,19 @@ const Register = () => {
                             />
                         </div>
                         <div>
+                            <label htmlFor="email" className="block text-sm/6 font-medium text-gray-900">
+                                Correo
+                            </label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                className="block w-full rounded-md border border-gray-300 focus:ring-blue-600 focus:border-blue-600 p-2.5 bg-gray-100 text-black outline-1 -outline-offset-1 focus:outline-indigo-600 sm:text-sm/6"
+                                placeholder=""
+                                required
+                            />
+                        </div>
+                        <div>
                             <label htmlFor="password" className="block text-sm/6 font-medium text-gray-900">
                                 Contraseña
                             </label>
@@ -53,6 +66,7 @@ const Register = () => {
                                 required
                             />
                         </div>
+                        
                         <div>
                             <Button className="flex w-full text-sm/6 font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2">
                                 Crear cuenta
