@@ -1,5 +1,6 @@
 import React from "react";
 import Button  from "../Button";
+import { Link } from "react-router-dom";
 
 
 const Login = () => {
@@ -25,7 +26,7 @@ const Login = () => {
                                 name="email"
                                 required
                                 autoComplete="email"
-                                className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-black placeholder:text-gray-700 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                                className="block w-full rounded-md border border-gray-300 focus:ring-blue-600 focus:border-blue-600 p-2.5 bg-gray-100 text-black outline-1 -outline-offset-1 focus:outline-indigo-600 sm:text-sm/6"
                             />
                         </div>
                     </div>
@@ -48,21 +49,21 @@ const Login = () => {
                                 type="password"
                                 required
                                 autoComplete="current-password"
-                                className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6 "
+                                className="block w-full rounded-md border border-gray-300 focus:ring-blue-600 focus:border-blue-600 p-2.5 bg-gray-100 text-black outline-1 -outline-offset-1 focus:outline-indigo-600 sm:text-sm/6"
                             />
                         </div>
                     </div>
 
                     <div>
-                        <Button className="flex w-full justify-center rounded-md  text-sm/6 font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Iniciar Sesión</Button>
+                        <Button className="flex w-full text-sm/6 font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2  ">Iniciar Sesión</Button>
                     </div>
                 </form>
 
                 <p className="mt-10 text-center text-sm/6 text-gray-500">
                     No se ha registrado{' '}
-                    <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                    <Link to="/register" className="font-semibold text-indigo-600 hover:text-indigo-500">
                         Registrese acá
-                    </a>
+                    </Link>
                 </p>
 
             </div>
