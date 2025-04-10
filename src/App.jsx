@@ -5,7 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Mision from "./components/Mision/Mision";
 import Vision from "./components/Vision/Vision";
 import Home from "./components/Home/Home";
-import Login from "./components/login/Login";
+import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import Categories from "./components/Categorias/Categories";
 
