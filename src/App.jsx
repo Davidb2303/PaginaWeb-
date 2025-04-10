@@ -7,6 +7,7 @@ import Vision from "./components/Vision/Vision";
 import Home from "./components/Home/Home";
 import Login from "./components/login/Login";
 import Register from "./components/Register/Register";
+import Categories from "./components/Categorias/Categories";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="/vision" element={<Vision />} />
             <Route path="/login" element={<Login/>} />
             <Route path="/register" element={<Register/>} />
+            <Route path="/category" element={<Categories/>} />
           </Routes>
         </div>
 
