@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const mysql = require('mysql2/promise');
+const mongoose = require('mongoose');
 require('dotenv').config();
 
 const pool = mysql.createPool({
