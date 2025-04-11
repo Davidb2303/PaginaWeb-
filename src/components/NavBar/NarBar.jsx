@@ -4,10 +4,10 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 
-const NavBarLink = ({className, children}) => (
-    <a href="" className={`lg:mr-4 text-white hover:font-semibold m-w-[300px] ${className}`}> 
+const NavBarLink = ({className, to="#",children}) => (
+    <Link to={to} className={`lg:mr-4 text-white hover:font-semibold m-w-[300px] ${className}`}> 
         {children} 
-    </a>
+    </Link>
 )
 
 const NavBar = () => {
@@ -55,21 +55,21 @@ const NavBar = () => {
 
                 {dropdownOpen && (
                     <div className="absolute mt-2 w-60 bg-white shadow-md rounded-lg z-50">
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
+                        <Link to={`/category/deportes`} className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
                             Deportes
-                        </a>
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
+                        </Link>
+                        <Link to={`/category/tecnologia`} className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
                             Tecnologia
-                        </a>
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
+                        </Link>
+                        <Link to={`/category/hogar`} className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
                             Hogar
-                        </a>
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
+                        </Link>
+                        <Link to={`/category/accesorios`} className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
                             Accesorios
-                        </a>
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
+                        </Link>
+                        <Link to={`/category/tecnologia`} className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
                             Cursos
-                        </a>
+                        </Link>
                     </div>
                 )}
                 </div>
@@ -77,10 +77,11 @@ const NavBar = () => {
 
                 <h2 className="text-white px-4"> Buscar </h2>
                 <input type="search" onChange={(e)=>filter(e.target.value)}></input>
-                <NavBarLink className="lg:mb-0 px-3">Ofertas</NavBarLink>
-                <NavBarLink className="lg:mb-0 px-3">Deportes</NavBarLink>
-                <NavBarLink className="lg:mb-0 px-3">Accesorios</NavBarLink>
-                <NavBarLink className="lg:mb-0 px-3">Ayuda</NavBarLink>
+                <NavBarLink to="/category/tecnologia" className="lg:mb-0 px-3">Tecnologia</NavBarLink>
+                <NavBarLink to="/category/deportes" className="lg:mb-0 px-3">Deportes</NavBarLink>
+                <NavBarLink to="/category/accesorios" className="lg:mb-0 px-3">Accesorios</NavBarLink>
+                <NavBarLink to="/category/cursos" className="lg:mb-0 px-3">Cursos</NavBarLink>
+                <NavBarLink to="/category/hogar" className="lg:mb-0 px-3">Hogar</NavBarLink>
 
                 <Link to="/login">
                     <Button className="lg:mt-0 lg:mr-4 text-white">Iniciar Sesion</Button>

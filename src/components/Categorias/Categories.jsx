@@ -22,6 +22,7 @@ const Categories = () => {
                         <img src={prod.imageUrl} alt={prod.name} className="w-full h-40 object-cover mb-2"/>
                         <h2 className="text-xl font-semibold">{prod.name}</h2>
                         <p>${prod.price}</p>
+                        <p>{prod.description}</p>
                         <p className="text-sm text-gray-500"></p>
                     </div>
                 ))}

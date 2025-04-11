@@ -3,7 +3,6 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const mysql = require('mysql2/promise');
-const mongoose = require('mongoose');
 require('dotenv').config();
 
 const pool = mysql.createPool({
@@ -17,14 +16,14 @@ router.post('/register', async (req, res) => {
   const { name, username, email, password } = req.body;
   try {
     const [exists] = await pool.query(
-      'SELECT * FROM users WHERE email = ? OR username = ?',
+      'SELECT * FROM Usuarios WHERE email = ? OR user_name = ?',
       [email, username]
     );
     if (exists.length > 0) return res.status(409).json({ msg: 'Usuario ya existe' });
 
     const hash = await bcrypt.hash(password, 10);
     await pool.query(
-      'INSERT INTO users (name, username, email, password) VALUES (?, ?, ?, ?)',
+      'INSERT INTO Usuarios (full_name, user_name, email, password) VALUES (?, ?, ?, ?)',
       [name, username, email, hash]
     );
 
@@ -38,7 +37,7 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
   try {
-    const [users] = await pool.query('SELECT * FROM users WHERE email = ?', [email]);
+    const [users] = await pool.query('SELECT * FROM Usuarios WHERE email = ?', [email]);
     if (users.length === 0) return res.status(404).json({ msg: 'Usuario no encontrado' });
 
     const user = users[0];

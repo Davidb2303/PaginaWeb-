@@ -1,11 +1,12 @@
 import React,{useState} from "react";
 import Button  from "../Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../../api/auth";
 
 
 const Login = () => {
     const [form, setForm] = useState({ email: "", password: "" });
+    const navigate = useNavigate();
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -17,7 +18,7 @@ const Login = () => {
       console.log("Login exitoso", res.data);
       // Guardar token si deseas usar autenticación
       localStorage.setItem("token", res.data.token);
-      alert("Sesión iniciada");
+      navigate("/");
     } catch (error) {
       console.error("Error al iniciar sesión", error.response.data);
       alert(error.response.data.msg || "Error al iniciar sesión");
